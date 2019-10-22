@@ -1,0 +1,22 @@
+{
+  "name": "natours2",
+  "version": "1.0.0",
+  "description": "study project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retvaripeter/Natours2.git"
+  },
+  "author": "peterretvari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/retvaripeter/Natours2/issues"
+  },
+  "homepage": "https://github.com/retvaripeter/Natours2#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
