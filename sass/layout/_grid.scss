@@ -1,12 +1,12 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
+
   margin: 0 auto;
 
   @include clearfix;
 
   [class^="col-"] {
-    background-color: orangered;
+
     float: left;
 
     //all column => 'col' of the current row should have a margin-right EXCEPT the last child
