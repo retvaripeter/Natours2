@@ -229,8 +229,30 @@ body {
     transform: translateY(-1.5rem) scale(1.03); }
 
 .card {
-  background-color: orangered;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
   height: 50rem; }
+  .card__side {
+    width: 100%;
+    background-color: #fff;
+    color: whitesmoke;
+    font-size: 2rem;
+    height: 50rem;
+    transition: all 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg);
+      background-color: orangered; }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
 
 .header {
   height: 95vh;
