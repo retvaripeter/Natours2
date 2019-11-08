@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: top;
   background-image: linear-gradient(to right bottom, rgba($color-light-green, .8), rgba($color-medium-green, .8)), url(../img/hero.jpg);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 

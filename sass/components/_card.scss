@@ -1,39 +1,108 @@
 .card{
+
+    // FUNCTIONALITY
+
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 54rem;
      &__side{
          width: 100%;
          
-        background-color: #fff;
-        color: whitesmoke;
-        font-size: 2rem;
-        height: 50rem;
+        overflow: hidden;
+        height: 54rem;
         transition: all 1s ease;
         position: absolute;
         top: 0;
         left: 0;
         backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: $box-shadow-hard;
 
         &--front{
             background-color: $color-white; 
+            position: relative;
         }
+
         
         &--back{
             //back side in the beginning is already rotated - 180deg already (as soon as we hover and then it moves to zero)
             transform: rotateY(180deg);
-            background-color: orangered;
+            
+            &-1{
+                background-image: linear-gradient(to right bottom, $color-secondary-ligth, $color-secondary-dark)
+                
+            }
+          
         }
      }
 
      &:hover &__side--front{
-         transform: rotateY(180deg);
+         transform: rotateY(-180deg);
      }
      &:hover &__side--back{
          transform: rotateY(0deg);
      }
-    //  &:hover &__side{
-    //     transform: rotateY(180deg);
-    // }
+    
+    // FRONT-SIDE STYLING
+
+    &__picture{
+        background-size: cover;
+        height: 47%;
+        background-blend-mode: screen;
+        -webkit-clip-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        
+        &--1{
+            background-image: linear-gradient(to right bottom, $color-secondary-ligth, $color-secondary-dark), url(../../img/nat-5.jpg);
+        }
+        &--2{
+            background-image: url(../../img/nat-5.jpg);
+        }
+        &--3{
+            background-image: url(../../img/nat-5.jpg);
+        }
+    }
+
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+    &__heading-span{
+        padding: 1rem 1rem;
+         -webkit-box-decoration-break:clone;
+        box-decoration-break:clone;
+       
+
+        &--1{
+            background-image:linear-gradient(to right bottom,
+             rgba( $color-secondary-ligth,.85),
+             rgba($color-secondary-dark,.85));
+        }
+    }
+    &__details{
+        padding: 3rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child){
+border-bottom: 1px solid $grey-color-light-2;
+                }
+            }
+          
+            
+        }
+    }
  }

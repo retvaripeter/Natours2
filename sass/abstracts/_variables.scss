@@ -5,8 +5,15 @@ $color-medium-green: #55c57a;
 $color-dark-green: #28b485;
 $color-dark-grey: #777;
 $grey-color-light-1: #f7f7f7;
+$grey-color-light-2: #eee;
 $color-white: #fff;
 $color-black: #000;
+
+$color-secondary-ligth: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-ligth: #2998ff;
+$color-tertiary-dark: #5643fa;
 
 // ------ GRID --------
 
@@ -17,3 +24,9 @@ $gutter-horizontal: 6rem;
 // ------- FONT -----
 
 $default-font-size: 1.6rem;
+
+// -- BOX SHADOWS ---
+
+$box-shadow-hard: 0 1.5rem 4rem rgba($color-black, .35);
+$box-shadow-medium: 0 1.5rem 4rem rgba($color-black, .25);
+$box-shadow-light: 0 1.5rem 4rem rgba($color-black, .10);
