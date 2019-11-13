@@ -103,9 +103,15 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 4rem; }
 
+.u-margin-up-big {
+  margin-bottom: -8rem; }
+
+.u-margin-up-huge {
+  margin-bottom: -10rem; }
+
 .section-about {
   background-color: #f7f7f7;
-  padding: 26rem 0;
+  padding: 27rem 0;
   margin-top: -20vh; }
 
 .section-features {
@@ -119,7 +125,7 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 31rem 0 50rem 0;
+  padding: 31rem 0 15rem 0;
   margin-top: -15rem; }
 
 .btn:link, .btn:visited {
@@ -147,6 +153,12 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #28b485; }
 
 .btn::after {
   content: '';
@@ -264,7 +276,8 @@ body {
     height: 47%;
     background-blend-mode: screen;
     -webkit-clip-clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
+    border-radius: 3px; }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/nat-5.jpg); }
     .card__picture--2 {
