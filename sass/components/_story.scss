@@ -11,6 +11,7 @@
     &>*{
         transform: skewX(12deg);   
     }
+    
     &__shape{
         width: 15rem;
         height: 15rem;
@@ -22,13 +23,38 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+        
 
+       
         
     }
-    &__img{
+
+
+        &__img{
             height: 100%;
         }
         &__text{
             transform: skewX(12deg);   
         }
+
+        &__caption{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 20%);
+            text-align: center;
+            color: $color-white;
+            font-size: 1.7rem;  
+            text-transform: uppercase;
+            opacity: 0;
+            transition: all 1s ease-in;
+            backface-visibility: hidden;
+        }
+        &:hover &__caption{
+                transform: translate(-50%, -50%);
+                opacity: 1;
+        }
+        
+       
 }
