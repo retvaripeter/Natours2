@@ -3,5 +3,15 @@
     content: "";
     clear: both;
     display: table;
+    text-align: center;
   }
+}
+
+@mixin alignCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
 }
