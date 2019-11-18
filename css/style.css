@@ -653,7 +653,7 @@ body {
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(80); }
+  transform: scale(150); }
 
 .navigation__checkbox:checked ~ .navigation__nav {
   width: 100%;
@@ -710,18 +710,28 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 75%;
     background-color: #f7f7f7;
     z-index: 2600;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
-    display: table; }
+    display: table;
+    overflow: hidden; }
   .popup__left {
     width: 33.333333%;
-    display: table-cell; }
+    display: table-cell;
+    vertical-align: middle; }
   .popup__right {
     width: 66.6666667%;
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    padding: 3rem 5rem; }
   .popup__img {
     display: block;
     width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #eee;
+    hyphens: auto; }

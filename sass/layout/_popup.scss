@@ -13,22 +13,25 @@
         border-radius: 3px;
         @include alignCenter;
        
-        width: 70%;
+        width: 75%;
         background-color:$grey-color-light-1;
         z-index: 2600;
         box-shadow: $box-shadow-medium;
         display: table;
+        overflow: hidden;
     }
 
     &__left{
         width: 33.333333%;
         display: table-cell;
+        vertical-align: middle;
     }
 
     &__right{
         width: 66.6666667%;
         display: table-cell;
         vertical-align: middle;
+        padding: 3rem 5rem;
     }
 
     &__img{
@@ -38,5 +41,14 @@
        
     }
 
-    &__text{}
+    &__text{
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $grey-color-light-2;
+        -moz-hypens: auto;
+        -ms-hypens: auto;
+        hyphens: auto;
+    }
 }
