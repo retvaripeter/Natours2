@@ -1,4 +1,4 @@
-.card{
+.card {
 
     // FUNCTIONALITY
 
@@ -7,9 +7,10 @@
 
     position: relative;
     height: 54rem;
-     &__side{
-         width: 100%;
-         
+
+    &__side {
+        width: 100%;
+
         overflow: hidden;
         height: 54rem;
         transition: all 1s ease;
@@ -20,62 +21,65 @@
         border-radius: 3px;
         box-shadow: $box-shadow-hard;
 
-        &--front{
-            background-color: $color-white; 
+        &--front {
+            background-color: $color-white;
             position: relative;
         }
 
-        
-        &--back{
+
+        &--back {
             //back side in the beginning is already rotated - 180deg already (as soon as we hover and then it moves to zero)
             transform: rotateY(180deg);
-            
-            &-1{
+
+            &-1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark)
-                
             }
-            &-2{
-                background-image:  linear-gradient(to right bottom, $color-light-green, $color-medium-green)
-                
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-light-green, $color-medium-green)
             }
-            &-3{
+
+            &-3 {
                 background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark)
             }
-          
-        }
-     }
 
-     &:hover &__side--front{
-         transform: rotateY(-180deg);
-     }
-     &:hover &__side--back{
-         transform: rotateY(0deg);
-     }
-    
-    // FRONT-SIDE STYLING
-
-    &__picture{
-        background-size: cover;
-        height: 47%;
-        background-blend-mode: screen;
-        -webkit-clip-clip-path:  polygon(0 0, 100% 0, 100% 76%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
-        border-radius: 3px;
-        
-        &--1{
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../../img/nat-5.jpg);
-        }
-        &--2{
-            background-image: linear-gradient(to right bottom, $color-light-green, $color-medium-green), url(../../img/nat-6.jpg);
-           
-        }
-        &--3{
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../../img/nat-7.jpg);
-        
         }
     }
 
-    &__heading{
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    // FRONT-SIDE STYLING
+
+    &__picture {
+        background-size: cover;
+        height: 47%;
+        background-blend-mode: screen;
+        -webkit-clip-clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
+        border-radius: 3px;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../../img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-light-green, $color-medium-green), url(../../img/nat-6.jpg);
+
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../../img/nat-7.jpg);
+
+        }
+    }
+
+    &__heading {
         font-size: 2.8rem;
         font-weight: 300;
         text-transform: uppercase;
@@ -86,66 +90,144 @@
         right: 2rem;
         width: 75%;
     }
-    &__heading-span{
-        padding: 1rem 1rem;
-         -webkit-box-decoration-break:clone;
-        box-decoration-break:clone;
-       
 
-        &--1{
-            background-image:linear-gradient(to right bottom,
-             rgba( $color-secondary-light,.85),
-             rgba($color-secondary-dark,.85));
+    &__heading-span {
+        padding: 1rem 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-secondary-light, .85),
+                    rgba($color-secondary-dark, .85));
         }
-        &--2{
-            background-image:linear-gradient(to right bottom,
-             rgba( $color-light-green,.85),
-             rgba($color-dark-green,.85));
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-light-green, .85),
+                    rgba($color-dark-green, .85));
         }
-        &--3{
-            background-image:linear-gradient(to right bottom,
-             rgba(  $color-tertiary-light,.85),
-             rgba( $color-tertiary-dark,.85));
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-tertiary-light, .85),
+                    rgba($color-tertiary-dark, .85));
         }
     }
-    &__details{
+
+    &__details {
         padding: 3rem;
-        ul{
+
+        ul {
             list-style: none;
             width: 80%;
             margin: 0 auto;
-            li{
+
+            li {
                 text-align: center;
                 font-size: 1.5rem;
                 padding: 1rem;
-                &:not(:last-child){
-border-bottom: 1px solid $grey-color-light-2;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $grey-color-light-2;
                 }
             }
-          
-            
+
+
 
         }
     }
-      // BACK-SIDE STYLING
 
-      &__cta {
-          
-          @include alignCenter;
-          width: 100%;
-          text-align: center;
-      }
-      &__price-box{
-          text-align: center;
-          color: $color-white;
-          margin-bottom: 8rem;
-      }
-      &__price-only{
+    // BACK-SIDE STYLING
+
+    &__cta {
+
+        @include alignCenter;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
         font-size: 1.4rem;
         text-transform: uppercase;
-      }
-      &__price-value{
+    }
+
+    &__price-value {
         font-size: 6rem;
         font-weight: 100;
-      }
- }
+    }
+
+    @include breakpoint(tab-port) {
+        // FUNCTIONALITY
+
+
+        height: auto;
+        border-radius: 3px;
+        background: $color-white;
+        box-shadow: $box-shadow-medium;
+
+        &__side {
+            height: auto;
+            position: relative;
+
+            box-shadow: none;
+
+
+
+
+            &--back {
+                //back side in the beginning is already rotated - 180deg already (as soon as we hover and then it moves to zero)
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+
+            }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0deg);
+        }
+
+
+
+        // FRONT-SIDE STYLING
+        &__picture {
+            height: 25rem;
+        }
+
+        &__details {
+            padding: 1rem;
+        }
+
+        // BACK-SIDE STYLING
+
+        &__cta {
+            padding: 7rem 4rem 9rem 4rem;
+            width: 100%;
+            position: relative;
+            top: 4rem;
+            left: 0;
+            transform: translate(0);
+
+            text-align: center;
+        }
+
+        &__price-box {
+
+            margin-bottom: 3rem;
+        }
+
+
+
+        &__price-value {
+            font-size: 4rem;
+
+        }
+    }
+}
