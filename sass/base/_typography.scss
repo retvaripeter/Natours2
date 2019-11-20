@@ -4,7 +4,7 @@ body {
   font-size: $default-font-size;
   line-height: 1.7;
   color: $color-dark-grey;
-  padding: 3rem;
+
 
 }
 
@@ -20,6 +20,12 @@ body {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
+
+    @include breakpoint (phone) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
+
     animation-name: moveInLeft;
     animation-duration: 1.2s;
     animation-timing-function: ease-out;
@@ -33,6 +39,10 @@ body {
 
     animation: moveInRight 1.2s ease-out;
 
+    @include breakpoint (phone) {
+
+      letter-spacing: .5rem;
+    }
 
   }
 }
@@ -47,6 +57,16 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s;
+
+  @include breakpoint (tab-port) {
+    font-size: 3rem;
+
+  }
+
+  @include breakpoint (phone) {
+    font-size: 2.5em;
+
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);

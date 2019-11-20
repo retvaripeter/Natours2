@@ -1,9 +1,26 @@
 .row {
   max-width: $grid-width;
-
   margin: 0 auto;
 
+  @include breakpoint(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
+
   @include clearfix;
+
+  //all row of the grid-tes container  should have a margin-bottom EXCEPT the last child
+  //first you choose the element (row) and use :not and after the last child
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+
+    @include breakpoint(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+
 
   [class^="col-"] {
 
@@ -13,14 +30,19 @@
     //first you choose the element (col) and use :not and after the last child
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include breakpoint(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include breakpoint(tab-port) {
+      width: 100% !important;
     }
   }
 
-  //all row of the grid-tes container  should have a margin-bottom EXCEPT the last child
-  //first you choose the element (row) and use :not and after the last child
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
+
 
   .col-1-of-2 {
 

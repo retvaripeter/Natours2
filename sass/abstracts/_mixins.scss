@@ -12,6 +12,71 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  
+
+
+}
+
+// ---------------------------------- Media Query Manager  -------------------------------------- 
+
+/*
+0 - 600px Phone
+600 - 900px Tablet portrait
+900 - 1200px Tablet landscape
+1200 - 1800px is where our normal CSS stylies apply
+1800 + : Big Desktop
+
+Breakpoint arguement chocies:
+-phone
+-tab-port
+-tab-land
+-big-desk
+
+Why em instead of pixel? Because user can change the browser font-size and after that media quaries written with pixel will not be affected by that. 
+
+1em = 16px
+
+ORDER for media query: Base + typography > general layout > grid > page layout > components
+*/
+
+
+@mixin breakpoint($breakpoint) {
+  @if($breakpoint==big-desk) {
+
+    @media(min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+
+  @if($breakpoint==tab-land) {
+
+    @media(max-width:75em) {
+      //1200px
+      @content;
+    }
+  }
+
+  @if($breakpoint==tab-port) {
+
+    @media(max-width:56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  @if($breakpoint==phone) {
+
+    @media(max-width:37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  @if($breakpoint==iphone) {
+
+    @media(max-width:28.75em) {
+      //460px
+      @content;
+    }
+  }
 }

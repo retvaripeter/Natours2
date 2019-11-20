@@ -10,9 +10,47 @@
 //this defines what 1rem is
 html {
   font-size: 62.5%;
+
+
+
+  // big desktop min width 1200px => font-size 12px - 75%
+
+  @include breakpoint (big-desk) {
+    font-size: 75%;
+  }
+
+  // tablet landscape max width 1200px => font-size 9px - 56.25%
+
+  @include breakpoint (tab-land) {
+    font-size: 56.25%;
+  }
+
+  // tablet landscape max width 900px => font-size 8px
+
+  @include breakpoint (tab-port) {
+    font-size: 50%;
+  }
+
+  // tablet landscape max width 600px => font-size 8px
+
+  // @include breakpoint (phone) {
+  //   font-size: 43.75%;
+  // }
+
+  // tablet landscape max width 600px => font-size 8px
+
+  // @include breakpoint (iphone) {
+  //   font-size: 35.75%;
+  // }
+
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include breakpoint (tab-port) {
+    padding: 0;
+  }
 
 }
