@@ -32,7 +32,52 @@
         width: 33.333333%;
         display: table-cell;
         vertical-align: middle;
+
+        @include breakpoint(tab-port) {
+            width: 100%;
+            display: block;
+
+        }
     }
+
+    @include breakpoint(tab-port) {
+        .popup__img {
+            width: 50%;
+            margin: 0 auto;
+            max-height: 27rem;
+            margin-bottom: 3rem;
+
+            &:first-child {
+                float: left;
+            }
+
+            &:nth-child(2) {
+                float: right;
+            }
+
+        }
+
+
+    }
+
+    @include breakpoint(phone) {
+        .popup__img {
+
+            display: none;
+        }
+
+        .popup__text {
+            column-count: 1;
+
+        }
+
+        .popup__right {
+
+            max-height: 61rem;
+            overflow: scroll;
+        }
+    }
+
 
     &__right {
         width: 66.6666667%;
@@ -40,6 +85,14 @@
         vertical-align: middle;
         padding: 3rem 5rem;
         position: relative;
+
+        @include breakpoint(tab-port) {
+            @include breakpoint(tab-port) {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
     }
 
     &__img {
