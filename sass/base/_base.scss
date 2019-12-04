@@ -54,3 +54,8 @@ body {
   }
 
 }
+
+::selection {
+  background-color: $color-medium-green;
+  color: $color-white;
+}
